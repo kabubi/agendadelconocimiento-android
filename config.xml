@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.coroleu.Agendaparque"
+        versionCode = "1.2"
+        version     = "1.2" >
+
+	<name>Agenda del Conocimiento</name>
+
+	<description>Agenda de eventos del Parque del Conocimiento</description>
+
+	<author href="https://www.coroleu.com" email="gaston@coroleu.com">Coroleu Estudio</author>
+
+	<gap:platform name="android" />
+
+	<!-- Phonegap Build -->
+	<preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="pgb-builder-version" value="2" />
+	
+	<!-- General preferences -->
+	<preference name="buildArchitecture" value="arm" />
+	<preference name="xwalkMultipleApk" value="true" />
+	<preference name="android-build-tool" value="gradle" />
+	<preference name="permissions" value="none"/>
+
+	<preference name="disallowOverscroll" value="true" />
+	<preference name="webviewbounce" value="false" />
+	
+	<!-- Android specific settings -->
+	<preference name="android-minSdkVersion" value="14" />
+	<preference name="android-targetSdkVersion" value="26" />
+
+	<!-- PhoneGap plugin declaration -->
+	<plugin name="cordova-plugin-inappbrowser" source="npm"/>
+	<plugin name="cordova-plugin-network-information" source="npm" />
+	<plugin name="cordova-plugin-whitelist" source="npm" />
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
+	<plugin name="cordova-plugin-device" source="npm" />
+	<plugin name="cordova-plugin-statusbar" source="npm" />
+	<plugin name="cordova-build-architecture" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" source="git" />
+	<plugin name="cordova-plugin-customurlscheme" spec="4.2.0" >
+		<param name="URL_SCHEME" value="agendascheme" />
+	</plugin>
+	<plugin name="pushwoosh-pgb-plugin" spec="6.5.3" source="npm" />
+	<plugin name="cordova-plugin-x-socialsharing" source="npm" />
+
+	<!-- Whitelist policy  -->
+	<access origin="*" />
+	<allow-intent href="*" />
+	<allow-navigation href="*" />
+
+	<!-- SplashScreen configuration -->
+	<preference name="SplashScreen" value="splash" />
+	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="FadeSplashScreenDuration" value="300" />
+	<preference name="ShowSplashScreenSpinner" value="false" />
+
+	<!-- Icons and Splashscreens declaration -->
+	
+	<icon src="icon.png" gap:platform="android" />
+	<icon src="icons/icon-wp-appkit-ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+	<icon src="icons/icon-wp-appkit-mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+	<icon src="icons/icon-wp-appkit-hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+	<icon src="icons/icon-wp-appkit-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+	<icon src="icons/icon-wp-appkit-xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
+	<icon src="icons/icon-wp-appkit-xxxhdpi.png" gap:platform="android" gap:qualifier="xxxhdpi" />
+	
+	<gap:splash src="splash.9.png" gap:platform="android" />
+	<gap:splash src="splashscreens/splashscreen-wp-appkit-ldpi.9.png" gap:platform="android" gap:qualifier="ldpi" />
+	<gap:splash src="splashscreens/splashscreen-wp-appkit-mdpi.9.png" gap:platform="android" gap:qualifier="mdpi" />
+	<gap:splash src="splashscreens/splashscreen-wp-appkit-hdpi.9.png" gap:platform="android" gap:qualifier="hdpi" />
+	<gap:splash src="splashscreens/splashscreen-wp-appkit-xhdpi.9.png" gap:platform="android" gap:qualifier="xhdpi" />
+	<gap:splash src="splashscreens/splashscreen-wp-appkit-xxhdpi.9.png" gap:platform="android" gap:qualifier="xxhdpi" />
+	<gap:splash src="splashscreens/splashscreen-wp-appkit-xxxhdpi.9.png" gap:platform="android" gap:qualifier="xxxhdpi" />
+	
+	<!-- Icons notification -->
+
+	<platform name="android">
+        <resource-file src="res/drawable-mdpi-v11/pw_notification.png" target="res/drawable-mdpi-v11/pw_notification.png" />
+		<resource-file src="res/drawable-hdpi-v11/pw_notification.png" target="res/drawable-hdpi-v11/pw_notification.png" />
+        <resource-file src="res/drawable-xhdpi-v11/pw_notification.png" target="res/drawable-xhdpi-v11/pw_notification.png" />
+        <resource-file src="res/drawable-xxhdpi-v11/pw_notification.png" target="res/drawable-xxhdpi-v11/pw_notification.png" />
+        <resource-file src="res/drawable-xxxhdpi-v11/pw_notification.png" target="res/drawable-xxxhdpi-v11/pw_notification.png" />
+        <resource-file src="res/drawable-xxxhdpi-v11/pw_notification.png" target="res/drawable-xxxhdpi-v11/pw_notification.png" />
+	</platform>
+</widget>
